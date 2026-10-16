@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061226"/>
+      <stop offset="50%" stop-color="#0a1e3f"/>
+      <stop offset="100%" stop-color="#051020"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="100%" stop-color="#00f5d4"/>
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(14, 43, 85, 0.85)"/>
+      <stop offset="100%" stop-color="rgba(8, 26, 56, 0.95)"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0072ff"/>
+      <stop offset="50%" stop-color="#00d2ff"/>
+      <stop offset="100%" stop-color="#00f5d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+
+  <!-- Tech Grid Background -->
+  <g opacity="0.12" stroke="#00d2ff" stroke-width="1">
+    <line x1="0" y1="120" x2="1280" y2="120"/>
+    <line x1="0" y1="240" x2="1280" y2="240"/>
+    <line x1="0" y1="360" x2="1280" y2="360"/>
+    <line x1="0" y1="480" x2="1280" y2="480"/>
+    <line x1="0" y1="600" x2="1280" y2="600"/>
+    <line x1="160" y1="0" x2="160" y2="720"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="480" y1="0" x2="480" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="800" y1="0" x2="800" y2="720"/>
+    <line x1="960" y1="0" x2="960" y2="720"/>
+    <line x1="1120" y1="0" x2="1120" y2="720"/>
+  </g>
+
+  <!-- Header Title in Art -->
+  <text x="640" y="90" text-anchor="middle" font-family="'Outfit', 'Segoe UI', sans-serif" font-weight="800" font-size="34" fill="#ffffff" letter-spacing="1.5">
+    END-TO-END PROJECT JOURNEY
+  </text>
+  <text x="640" y="125" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="500" font-size="16" fill="#00d2ff" letter-spacing="3">
+    FROM CONCEPT &amp; SPECIFICATION TO FULL DEPLOYMENT
+  </text>
+
+  <!-- Central Flow Pathway Line -->
+  <path d="M 140 380 Q 320 280 500 380 T 860 380 T 1140 380" fill="none" stroke="url(#accentLine)" stroke-width="6" filter="url(#glow)"/>
+  <path d="M 140 380 Q 320 280 500 380 T 860 380 T 1140 380" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+
+  <!-- Milestone 1: Concept & Requirements -->
+  <g transform="translate(140, 380)">
+    <circle r="36" fill="#091b38" stroke="#00d2ff" stroke-width="3" filter="url(#glow)"/>
+    <circle r="18" fill="#00d2ff"/>
+    <text y="6" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#061226">01</text>
+    
+    <g transform="translate(-110, -170)">
+      <rect width="220" height="110" rx="14" fill="url(#blueCard)" stroke="#00d2ff" stroke-width="1.5"/>
+      <rect x="15" y="15" width="40" height="20" rx="6" fill="#00d2ff" fill-opacity="0.2"/>
+      <text x="35" y="29" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#00d2ff">PHASE 1</text>
+      <text x="15" y="58" font-family="'Outfit', sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Concept &amp; Scoping</text>
+      <text x="15" y="80" font-family="'DM Sans', sans-serif" font-size="12" fill="#8da4c4">Requirements, SRS &amp; Feasibility</text>
+    </g>
+  </g>
+
+  <!-- Milestone 2: Architecture & Design -->
+  <g transform="translate(390, 310)">
+    <circle r="36" fill="#091b38" stroke="#00d2ff" stroke-width="3" filter="url(#glow)"/>
+    <circle r="18" fill="#00d2ff"/>
+    <text y="6" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#061226">02</text>
+
+    <g transform="translate(-110, 60)">
+      <rect width="220" height="110" rx="14" fill="url(#blueCard)" stroke="#00d2ff" stroke-width="1.5"/>
+      <rect x="15" y="15" width="40" height="20" rx="6" fill="#00d2ff" fill-opacity="0.2"/>
+      <text x="35" y="29" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#00d2ff">PHASE 2</text>
+      <text x="15" y="58" font-family="'Outfit', sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Architecture &amp; UX</text>
+      <text x="15" y="80" font-family="'DM Sans', sans-serif" font-size="12" fill="#8da4c4">UML, DB Schema &amp; Wireframes</text>
+    </g>
+  </g>
+
+  <!-- Milestone 3: Full-Stack Engineering -->
+  <g transform="translate(640, 380)">
+    <circle r="42" fill="#091b38" stroke="#00f5d4" stroke-width="4" filter="url(#glow)"/>
+    <circle r="22" fill="#00f5d4"/>
+    <text y="7" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#061226">03</text>
+
+    <g transform="translate(-115, -180)">
+      <rect width="230" height="120" rx="14" fill="url(#blueCard)" stroke="#00f5d4" stroke-width="2"/>
+      <rect x="15" y="15" width="45" height="20" rx="6" fill="#00f5d4" fill-opacity="0.2"/>
+      <text x="37" y="29" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#00f5d4">PHASE 3</text>
+      <text x="15" y="58" font-family="'Outfit', sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Core Development</text>
+      <text x="15" y="80" font-family="'DM Sans', sans-serif" font-size="12" fill="#8da4c4">Clean Code, Backend &amp; APIs</text>
+      <text x="15" y="98" font-family="'DM Sans', sans-serif" font-size="11" fill="#00f5d4">✦ Core Milestone Active</text>
+    </g>
+  </g>
+
+  <!-- Milestone 4: QA & Testing -->
+  <g transform="translate(890, 310)">
+    <circle r="36" fill="#091b38" stroke="#00d2ff" stroke-width="3" filter="url(#glow)"/>
+    <circle r="18" fill="#00d2ff"/>
+    <text y="6" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#061226">04</text>
+
+    <g transform="translate(-110, 60)">
+      <rect width="220" height="110" rx="14" fill="url(#blueCard)" stroke="#00d2ff" stroke-width="1.5"/>
+      <rect x="15" y="15" width="40" height="20" rx="6" fill="#00d2ff" fill-opacity="0.2"/>
+      <text x="35" y="29" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#00d2ff">PHASE 4</text>
+      <text x="15" y="58" font-family="'Outfit', sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Testing &amp; QA</text>
+      <text x="15" y="80" font-family="'DM Sans', sans-serif" font-size="12" fill="#8da4c4">Unit Tests, Bug Fixes &amp; Audit</text>
+    </g>
+  </g>
+
+  <!-- Milestone 5: Delivery & Presentation -->
+  <g transform="translate(1140, 380)">
+    <circle r="38" fill="#091b38" stroke="#25d366" stroke-width="3" filter="url(#glow)"/>
+    <circle r="20" fill="#25d366"/>
+    <text y="7" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#061226">05</text>
+
+    <g transform="translate(-120, -170)">
+      <rect width="230" height="110" rx="14" fill="url(#blueCard)" stroke="#25d366" stroke-width="1.5"/>
+      <rect x="15" y="15" width="40" height="20" rx="6" fill="#25d366" fill-opacity="0.2"/>
+      <text x="35" y="29" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#25d366">PHASE 5</text>
+      <text x="15" y="58" font-family="'Outfit', sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Delivery &amp; Viva</text>
+      <text x="15" y="80" font-family="'DM Sans', sans-serif" font-size="12" fill="#8da4c4">Final Review, Defense &amp; Deploy</text>
+    </g>
+  </g>
+
+  <!-- Floating bottom stats bar -->
+  <g transform="translate(340, 620)">
+    <rect width="600" height="56" rx="28" fill="rgba(10, 28, 58, 0.9)" stroke="#00d2ff" stroke-width="1" opacity="0.95"/>
+    <text x="150" y="34" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ffffff">
+      <tspan fill="#00f5d4">✓</tspan> 100% Milestone Tracking
+    </text>
+    <circle cx="300" cy="28" r="3" fill="#8da4c4"/>
+    <text x="450" y="34" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ffffff">
+      <tspan fill="#00d2ff">✦</tspan> Step-by-Step Mentoring
+    </text>
+  </g>
+</svg>
