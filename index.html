@@ -201,6 +201,175 @@
       align-items: center;
       gap: 6px;
     }
+    .nav-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nav-drop-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #0864dd !important;
+      background: #eaf4ff;
+      padding: 6px 14px !important;
+      border-radius: 99px;
+      border: 1px solid #d4e7ff;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .nav-drop-btn:hover {
+      background: #d8ebff;
+      border-color: #b9d8ff;
+      color: #0050bd !important;
+    }
+    .nav-drop-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 270px;
+      background: #ffffff;
+      border: 1px solid #dbe6f5;
+      border-radius: 14px;
+      padding: 8px;
+      box-shadow: 0 14px 34px rgba(8, 28, 61, 0.12);
+      z-index: 250;
+    }
+    .nav-dropdown:hover .nav-drop-menu,
+    .nav-dropdown:focus-within .nav-drop-menu {
+      display: block;
+    }
+    .nav-drop-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      transition: background 0.15s ease;
+    }
+    .nav-drop-item:hover {
+      background: #f1f7fe;
+    }
+    .nav-drop-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: #eaf4ff;
+      color: #0864dd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .nav-drop-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0a2349;
+      line-height: 1.3;
+    }
+    .nav-drop-sub {
+      font-size: 11.5px;
+      color: #6d7b91;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .promo-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f4f8fe 100%);
+      border: 1px solid #dce8f6;
+      border-radius: 16px;
+      padding: 22px 28px;
+      box-shadow: 0 12px 32px rgba(8, 28, 61, 0.08);
+      position: relative;
+    }
+    .promo-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eafaf1;
+      border: 1px solid #c7f3d9;
+      color: #0d8745;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      padding: 4px 10px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+    .promo-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .promo-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .promo-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #087cf0, #0056b3);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 18px rgba(8, 124, 240, 0.3);
+    }
+    .promo-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0a2349;
+      margin: 0 0 4px;
+      font-family: 'Outfit', sans-serif;
+    }
+    .promo-sub {
+      font-size: 13.5px;
+      color: #556782;
+      margin: 0;
+      max-width: 680px;
+      line-height: 1.5;
+    }
+    .promo-cta {
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .nav-dropdown {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-drop-btn {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .nav-drop-menu {
+        position: static;
+        transform: none;
+        width: 100%;
+        display: block;
+        box-shadow: none;
+        border: 1px solid #eef2f6;
+        margin-top: 6px;
+      }
+      .promo-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .promo-cta {
+        width: 100%;
+      }
+      .promo-cta .btn {
+        width: 100%;
+      }
+    }
     .header-actions {
       display: flex;
       align-items: center;
@@ -1164,6 +1333,20 @@
         <a href="#journey">How It Works</a>
         <a href="#pathways">Learning Paths</a>
         <a href="#faq">FAQs</a>
+        <div class="nav-dropdown">
+          <a href="/gantt-chart/" class="nav-drop-btn">
+            Free Tools <span style="font-size:10px;">▾</span>
+          </a>
+          <div class="nav-drop-menu">
+            <a href="/gantt-chart/" class="nav-drop-item">
+              <div class="nav-drop-icon">📊</div>
+              <div>
+                <div class="nav-drop-title">Free Gantt Chart Maker</div>
+                <div class="nav-drop-sub">Project timeline tool for students &amp; reports</div>
+              </div>
+            </a>
+          </div>
+        </div>
       </nav>
 
       <div class="header-actions">
@@ -1242,6 +1425,29 @@
         </div>
       </div>
     </section>
+
+    <!-- Promotional Card: Free Online Gantt Chart Maker for Students -->
+    <div class="container" style="margin-top: -30px; margin-bottom: 30px; position: relative; z-index: 10;">
+      <div class="promo-card">
+        <div class="promo-badge-tag">
+          <span class="dot dot-green"></span> 100% FREE STUDENT TOOL
+        </div>
+        <div class="promo-inner">
+          <div class="promo-left">
+            <div class="promo-icon-box">📊</div>
+            <div>
+              <h3 class="promo-title">Free Online Gantt Chart Maker for Students</h3>
+              <p class="promo-sub">
+                Create clean, academic project timelines for final-year projects (FYP), capstone proposals, and documentation. No sign-up, no watermark, instant high-res PNG download.
+              </p>
+            </div>
+          </div>
+          <div class="promo-cta">
+            <a href="/gantt-chart/" class="btn btn-sm">Create Gantt Chart Free <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ========================================================
          DEDICATED SECTION: ASSIGNMENTS & PROJECTS (MANAGEMENT & SOFTWARE ENGINEERING)
@@ -1668,6 +1874,10 @@
             <a href="#journey">Our Approach</a>
             <a href="#pathways">Learning Paths</a>
             <a href="#faq">FAQs</a>
+            <a href="/gantt-chart/" style="color: #14d6e8; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              <span>Free Gantt Chart Maker</span>
+              <span style="font-size: 10px; background: rgba(20, 214, 232, 0.15); color: #14d6e8; padding: 1px 6px; border-radius: 99px;">100% Free</span>
+            </a>
           </div>
         </div>
 

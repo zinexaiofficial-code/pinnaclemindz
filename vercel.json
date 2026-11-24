@@ -10,6 +10,18 @@
       "dest": "/assets/$1"
     },
     {
+      "src": "^/(sitemap\\.xml|robots\\.txt)",
+      "dest": "/$1"
+    },
+    {
+      "src": "^/gantt-chart/(.*)",
+      "dest": "/gantt-chart/$1"
+    },
+    {
+      "src": "^/gantt-chart/?$",
+      "dest": "/gantt-chart/index.html"
+    },
+    {
       "src": "^/(.*)",
       "dest": "/index.html"
     }

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Gantt Chart Maker for Students | PinnacleMindz</title>
+  <meta name="description" content="Create professional Gantt charts for university projects, final-year projects and academic reports. Add tasks, select dates and download high-resolution PNG images completely free. No registration required.">
+  <meta name="keywords" content="Free Gantt Chart Maker, Online Gantt Chart Maker, Gantt Chart for Students, University Project Gantt Chart, Final Year Project Gantt Chart, Free Gantt Chart PNG Download, BIT Project Gantt Chart, Undergraduate Project Timeline">
+  <link rel="canonical" href="https://www.pinnaclemindz.tech/gantt-chart/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Gantt Chart Maker for Students | PinnacleMindz">
+  <meta property="og:description" content="Completely free, client-side Gantt chart maker designed for undergraduate students. Create project schedules and download high-resolution PNG charts instantly.">
+  <meta property="og:url" content="https://www.pinnaclemindz.tech/gantt-chart/">
+  <meta property="og:image" content="../assets/track_web_apps.jpg">
+
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PinnacleMindz Top Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <img alt="PinnacleMindz icon" src="../assets/logo.png" width="40" height="40">
+        <span class="brand-name">Pinnacle<span>Mindz</span></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="/">Home</a>
+        <a href="/#assignments">Assignments &amp; Projects</a>
+        <a href="/#services">What We Offer</a>
+        <a href="/#journey">How It Works</a>
+        <div class="nav-dropdown">
+          <a href="/gantt-chart/" class="nav-drop-btn active">
+            Free Tools <span style="font-size:10px;">▾</span>
+          </a>
+          <div class="nav-drop-menu">
+            <a href="/gantt-chart/" class="nav-drop-item active">
+              <div class="nav-drop-icon">📊</div>
+              <div>
+                <div class="nav-drop-title">Free Gantt Chart Maker</div>
+                <div class="nav-drop-sub">Academic &amp; FYP timeline generator</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-whatsapp-compact" href="https://wa.me/94779701237?text=Hi%20PinnacleMindz!%20I%20am%20using%20the%20Free%20Gantt%20Chart%20Maker." target="_blank" rel="noopener noreferrer">
+          <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.031 2a9.97 9.97 0 0 0-8.52 15.176L2 22l4.945-1.472A9.98 9.98 0 0 0 12.03 22c5.518 0 9.999-4.482 10-10C22.03 6.48 17.55 2 12.031 2zm0 18.232a8.214 8.214 0 0 1-4.223-1.168l-.303-.18-2.943.876.883-2.868-.198-.314A8.216 8.216 0 1 1 12.03 20.232zm4.551-6.16c-.249-.125-1.474-.728-1.703-.811-.229-.083-.396-.125-.562.125-.166.249-.645.811-.79.977-.146.166-.292.187-.541.062a6.837 6.837 0 0 1-2.01-1.24 7.55 7.55 0 0 1-1.393-1.737c-.146-.25-.015-.385.11-.51.112-.112.25-.291.374-.437.125-.145.166-.25.25-.416.083-.166.042-.312-.021-.437-.062-.125-.562-1.353-.77-1.853-.203-.487-.41-.42-.562-.428h-.479c-.166 0-.437.062-.666.312-.229.25-.874.854-.874 2.082 0 1.229.895 2.416 1.02 2.583.125.166 1.76 2.688 4.265 3.77.596.257 1.062.41 1.425.525.599.19 1.144.163 1.575.099.48-.072 1.474-.604 1.682-1.187.208-.583.208-1.083.146-1.187-.063-.104-.23-.167-.479-.292z"/></svg>
+          <span>WhatsApp Inquiry</span>
+        </a>
+        <button class="hamburger" id="menu" aria-label="Open navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Tool Page Content -->
+  <main class="gantt-app">
+    <!-- Top Bar: Title & Privacy Notice -->
+    <div class="tool-intro">
+      <div class="tool-title-row">
+        <div>
+          <h1 class="tool-title">Free Gantt Chart Maker</h1>
+          <p class="tool-subtitle">Clean, academic-grade project timelines for undergraduate proposals, capstones, and reports.</p>
+        </div>
+        <div class="privacy-badge" title="Zero tracking. Data is kept in browser memory and discarded on refresh.">
+          <span class="privacy-dot"></span>
+          <span>100% Free • No registration required • Your project data is never stored</span>
+        </div>
+      </div>
+
+      <!-- Project Title Bar & Date Range Notice -->
+      <div class="project-header-bar">
+        <div class="project-title-input-wrapper">
+          <label for="projectTitle" class="project-title-label">Project Title (optional):</label>
+          <input type="text" id="projectTitle" class="project-title-input" placeholder="e.g. Undergraduate Final Year Project Schedule" maxlength="120" value="Undergraduate Final Year Project Schedule">
+        </div>
+        <div class="timeline-summary" id="timelineSummary">
+          <!-- Populated by JS: e.g. "Total Duration: 120 Days • 10 Tasks" -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Action Toolbar -->
+    <div class="gantt-toolbar">
+      <div class="toolbar-group">
+        <button type="button" class="tool-btn tool-btn-primary" id="btnAddTask" title="Add a new task row">
+          <span class="icon">+</span> Add Task
+        </button>
+        <button type="button" class="tool-btn" id="btnLoadExample" title="Load sample university software engineering project schedule">
+          <span class="icon">📂</span> Load Example
+        </button>
+        <button type="button" class="tool-btn tool-btn-outline" id="btnNewChart" title="Clear chart and start fresh">
+          <span class="icon">🗑</span> New Chart
+        </button>
+      </div>
+
+      <div class="toolbar-separator"></div>
+
+      <!-- View Switcher -->
+      <div class="toolbar-group">
+        <span class="toolbar-label">View:</span>
+        <div class="segmented-control" role="group" aria-label="Timeline View Modes">
+          <button type="button" class="segment-btn" data-view="day">Day</button>
+          <button type="button" class="segment-btn" data-view="week">Week</button>
+          <button type="button" class="segment-btn active" data-view="month">Month</button>
+        </div>
+      </div>
+
+      <div class="toolbar-separator"></div>
+
+      <!-- Zoom Controls -->
+      <div class="toolbar-group">
+        <button type="button" class="tool-btn-icon" id="btnZoomOut" title="Zoom Out (-)" aria-label="Zoom Out">
+          <svg viewBox="0 0 24 24"><path d="M19 13H5v-2h14v2z"/></svg>
+        </button>
+        <span class="zoom-level-text" id="zoomLevelDisplay">100%</span>
+        <button type="button" class="tool-btn-icon" id="btnZoomIn" title="Zoom In (+)" aria-label="Zoom In">
+          <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+        </button>
+        <button type="button" class="tool-btn tool-btn-sm" id="btnZoomToFit" title="Fit entire timeline to screen width">
+          Zoom to Fit
+        </button>
+      </div>
+
+      <div class="toolbar-spacer"></div>
+
+      <!-- Export PNG Action -->
+      <div class="toolbar-group export-group">
+        <div class="export-quality-select-wrapper" title="Export Resolution">
+          <select id="exportQuality" class="export-quality-select" aria-label="Export Resolution">
+            <option value="3" selected>High Resolution (3x Print)</option>
+            <option value="1">Standard Resolution (1x Web)</option>
+          </select>
+        </div>
+        <button type="button" class="tool-btn tool-btn-export" id="btnExportPNG" title="Download clean Gantt Chart PNG for academic report">
+          <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+          <span>Download PNG</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Interactive Gantt Workspace -->
+    <div class="gantt-workspace" id="ganttWorkspace">
+      <!-- Left Panel: Task Table -->
+      <div class="gantt-panel-left" id="panelLeft">
+        <!-- Table Header -->
+        <div class="task-table-header" id="taskTableHeader">
+          <div class="col-id">#</div>
+          <div class="col-name">Task Name</div>
+          <div class="col-actions">Actions</div>
+        </div>
+
+        <!-- Task Table Body -->
+        <div class="task-table-body" id="taskTableBody">
+          <!-- Rows dynamically generated -->
+        </div>
+      </div>
+
+      <!-- Draggable Splitter Divider -->
+      <div class="gantt-splitter" id="ganttSplitter" title="Drag to resize columns"></div>
+
+      <!-- Right Panel: Timeline -->
+      <div class="gantt-panel-right" id="panelRight">
+        <!-- Timeline Header (Syncs horizontally with timeline scroll) -->
+        <div class="timeline-header-container" id="timelineHeaderContainer">
+          <div class="timeline-header-canvas-wrap" id="timelineHeaderWrap">
+            <div class="timeline-header-tier tier-year" id="tierYear"></div>
+            <div class="timeline-header-tier tier-sub" id="tierSub"></div>
+          </div>
+        </div>
+
+        <!-- Timeline Scrollable Body -->
+        <div class="timeline-body-container" id="timelineBodyContainer">
+          <!-- Timeline Grid lines & bars wrapper -->
+          <div class="timeline-content" id="timelineContent">
+            <!-- Background vertical and horizontal grid lines -->
+            <div class="timeline-grid-lines" id="timelineGridLines"></div>
+
+            <!-- Task Bars Layer -->
+            <div class="timeline-bars-layer" id="timelineBarsLayer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty State Overlay (shown when 0 tasks) -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">📊</div>
+        <h3>No tasks in your Gantt chart yet</h3>
+        <p>Start planning by adding a task or load a realistic sample schedule with one click.</p>
+        <div class="empty-buttons">
+          <button type="button" class="tool-btn tool-btn-primary" id="btnEmptyAddTask">+ Add First Task</button>
+          <button type="button" class="tool-btn" id="btnEmptyLoadExample">📂 Load Example Schedule</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Help & Tips Footer inside workspace -->
+    <div class="chart-usage-hints">
+      <span>💡 <strong>Quick Controls:</strong> Drag blue bar to move dates • Drag handles to resize • Double-click row or bar to edit • Use <strong>Zoom to Fit</strong> to preview full duration</span>
+    </div>
+  </main>
+
+  <!-- Compact Website Footer -->
+  <footer class="tool-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="/" class="brand-name footer-brand">Pinnacle<span>Mindz</span></a>
+        <p>100% Free Client-Side Student Tools. No registration, no watermarks, no database tracking.</p>
+      </div>
+      <div class="footer-right">
+        <a href="/">Home</a>
+        <a href="/#assignments">Assignments &amp; Projects</a>
+        <a href="/#services">Services</a>
+        <a href="https://wa.me/94779701237" target="_blank" rel="noopener noreferrer">WhatsApp Support (+94 77 970 1237)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Task Add / Edit Modal Dialog -->
+  <div class="modal-overlay" id="taskModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Add Task</h3>
+        <button type="button" class="modal-close-btn" id="btnModalClose" aria-label="Close dialog">×</button>
+      </div>
+
+      <form id="taskForm" class="modal-body" novalidate>
+        <div class="form-group">
+          <label for="inputTaskName" class="form-label">Task Name <span class="required">*</span></label>
+          <input type="text" id="inputTaskName" class="form-input" placeholder="e.g. Planning &amp; Requirements Gathering" required maxlength="150" autocomplete="off">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inputStartDate" class="form-label">Start Date <span class="required">*</span></label>
+            <input type="date" id="inputStartDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEndDate" class="form-label">End Date <span class="required">*</span></label>
+            <input type="date" id="inputEndDate" class="form-input" required>
+          </div>
+        </div>
+
+        <!-- Duration Calculation Badge -->
+        <div class="duration-display" id="modalDurationDisplay">
+          Duration: <strong>1 day</strong> (inclusive calendar days)
+        </div>
+
+        <!-- Error Alert -->
+        <div class="form-error" id="formError" style="display: none;"></div>
+
+        <div class="modal-footer">
+          <button type="button" class="tool-btn tool-btn-outline" id="btnModalCancel">Cancel</button>
+          <button type="submit" class="tool-btn tool-btn-primary" id="btnModalSave">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive Floating Tooltip for Task Bars -->
+  <div class="gantt-tooltip" id="ganttTooltip" style="display: none;"></div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
