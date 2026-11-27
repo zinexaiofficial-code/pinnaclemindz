@@ -709,7 +709,6 @@
 
       bar.innerHTML = `
         <div class="bar-resize-handle handle-left" title="Drag to change start date"></div>
-        <span class="task-bar-label">${escapeHtml(task.name)}</span>
         <div class="bar-resize-handle handle-right" title="Drag to change end date"></div>
       `;
 
@@ -1439,22 +1438,6 @@
           drawRoundedRect(ctx, barX, barY, barWidth, EXPORT_BAR_HEIGHT, barRadius);
           ctx.fill();
           ctx.stroke();
-
-          // Bar text (Task name inside bar if space permits)
-          if (barWidth > 40) {
-            ctx.save();
-            // Clip to bar boundaries with padding
-            ctx.beginPath();
-            ctx.rect(barX + 6, barY, barWidth - 12, EXPORT_BAR_HEIGHT);
-            ctx.clip();
-
-            ctx.fillStyle = '#FFFFFF';
-            ctx.font = "bold 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-            ctx.textAlign = 'left';
-            ctx.textBaseline = 'middle';
-            ctx.fillText(task.name, barX + 8, barY + (EXPORT_BAR_HEIGHT / 2));
-            ctx.restore();
-          }
         });
 
         // 8. Footer Notice / Branding in export image (Academic citation style)
